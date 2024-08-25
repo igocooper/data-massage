@@ -1,4 +1,4 @@
-function seedSecret(input) {
+function dataMassage(input) {
   const chunkSize = 6; // 24 words, so 4 chunks of 6
   const keys = Object.keys(input).map(Number);
   const values = Object.values(input);
@@ -26,6 +26,6 @@ function seedSecret(input) {
   return result;
 }
 
-const output = seedSecret(seed);
+const output = dataMassage(seed);
 
 console.log(output);
